@@ -1,5 +1,45 @@
 {
-  "groups": {},
+  "groups": {
+    "GLXAttribute": {
+      "GLX_ACCUM_ALPHA_SIZE": "17",
+      "GLX_ACCUM_BLUE_SIZE": "16",
+      "GLX_ACCUM_GREEN_SIZE": "15",
+      "GLX_ACCUM_RED_SIZE": "14",
+      "GLX_ALPHA_SIZE": "11",
+      "GLX_AUX_BUFFERS": "7",
+      "GLX_BLUE_SIZE": "10",
+      "GLX_BUFFER_SIZE": "2",
+      "GLX_CONFIG_CAVEAT": "0x20",
+      "GLX_DEPTH_SIZE": "12",
+      "GLX_DOUBLEBUFFER": "5",
+      "GLX_GREEN_SIZE": "9",
+      "GLX_LEVEL": "3",
+      "GLX_RED_SIZE": "8",
+      "GLX_RGBA": "4",
+      "GLX_STENCIL_SIZE": "13",
+      "GLX_STEREO": "6",
+      "GLX_TRANSPARENT_ALPHA_VALUE": "0x28",
+      "GLX_TRANSPARENT_ALPHA_VALUE_EXT": "0x28",
+      "GLX_TRANSPARENT_BLUE_VALUE": "0x27",
+      "GLX_TRANSPARENT_BLUE_VALUE_EXT": "0x27",
+      "GLX_TRANSPARENT_GREEN_VALUE": "0x26",
+      "GLX_TRANSPARENT_GREEN_VALUE_EXT": "0x26",
+      "GLX_TRANSPARENT_INDEX_VALUE": "0x24",
+      "GLX_TRANSPARENT_INDEX_VALUE_EXT": "0x24",
+      "GLX_TRANSPARENT_RED_VALUE": "0x25",
+      "GLX_TRANSPARENT_RED_VALUE_EXT": "0x25",
+      "GLX_TRANSPARENT_TYPE": "0x23",
+      "GLX_TRANSPARENT_TYPE_EXT": "0x23",
+      "GLX_USE_GL": "1",
+      "GLX_VISUAL_CAVEAT_EXT": "0x20",
+      "GLX_X_VISUAL_TYPE": "0x22",
+      "GLX_X_VISUAL_TYPE_EXT": "0x22"
+    },
+    "SpecialNumbers": {
+      "GLX_CONTEXT_RELEASE_BEHAVIOR_NONE_ARB": "0",
+      "GLX_DONT_CARE": "0xFFFFFFFF"
+    }
+  },
   "structs": {},
   "typedefs": {
     "GLXBufferClobberEventSGIX": "typedef struct {\n    int type;\n    unsigned long serial;   /* # of last request processed by server */\n    Bool send_event;        /* true if this came for SendEvent request */\n    Display *display;       /* display the event was read from */\n    GLXDrawable drawable;   /* i.d. of Drawable */\n    int event_type;         /* GLX_DAMAGED_SGIX or GLX_SAVED_SGIX */\n    int draw_type;          /* GLX_WINDOW_SGIX or GLX_PBUFFER_SGIX */\n    unsigned int mask;      /* mask indicating which buffers are affected*/\n    int x, y;\n    int width, height;\n    int count;              /* if nonzero, at least this many more */\n} GLXBufferClobberEventSGIX;",

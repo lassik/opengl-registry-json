@@ -23,10 +23,17 @@ def convert_library(library):
     xml = ET.parse(open("{}.xml".format(library), "rb"))
     for groups in xml.findall("groups"):
         for group in groups.findall("group"):
-            enums = []
+            enums = {}
             for enum in group.findall("enum"):
-                enums.append(enum.attrib["name"])
+                enums[enum.attrib["name"]] = None
             j["groups"][group.attrib["name"]] = enums
+    for enums in xml.findall("enums"):
+        group = enums.attrib.get("group")
+        if group:
+            for enum in enums.findall("enum"):
+                name, value = enum.attrib["name"], enum.attrib["value"]
+                if name and value:
+                    j["groups"][group][name] = value
     for types in xml.findall("types"):
         for type in types.findall("type"):
             name = None
