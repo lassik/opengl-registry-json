@@ -1,3 +1,30 @@
 {
-  "groups": {}
+  "groups": {},
+  "structs": {},
+  "typedefs": {
+    "GLXBufferClobberEventSGIX": "typedef struct {\n    int type;\n    unsigned long serial;   /* # of last request processed by server */\n    Bool send_event;        /* true if this came for SendEvent request */\n    Display *display;       /* display the event was read from */\n    GLXDrawable drawable;   /* i.d. of Drawable */\n    int event_type;         /* GLX_DAMAGED_SGIX or GLX_SAVED_SGIX */\n    int draw_type;          /* GLX_WINDOW_SGIX or GLX_PBUFFER_SGIX */\n    unsigned int mask;      /* mask indicating which buffers are affected*/\n    int x, y;\n    int width, height;\n    int count;              /* if nonzero, at least this many more */\n} GLXBufferClobberEventSGIX;",
+    "GLXBufferSwapComplete": "typedef struct {\n    int type;\n    unsigned long serial;       /* # of last request processed by server */\n    Bool send_event;            /* true if this came from a SendEvent request */\n    Display *display;           /* Display the event was read from */\n    GLXDrawable drawable;       /* drawable on which event was requested in event mask */\n    int event_type;\n    int64_t ust;\n    int64_t msc;\n    int64_t sbc;\n} GLXBufferSwapComplete;",
+    "GLXContext": "typedef struct __GLXcontextRec *GLXContext;",
+    "GLXContextID": "typedef XID GLXContextID;",
+    "GLXDrawable": "typedef XID GLXDrawable;",
+    "GLXEvent": "typedef union __GLXEvent {\n    GLXPbufferClobberEvent glxpbufferclobber;\n    GLXBufferSwapComplete glxbufferswapcomplete;\n    long pad[24];\n} GLXEvent;",
+    "GLXFBConfig": "typedef struct __GLXFBConfigRec *GLXFBConfig;",
+    "GLXFBConfigID": "typedef XID GLXFBConfigID;",
+    "GLXFBConfigIDSGIX": "typedef XID GLXFBConfigIDSGIX;",
+    "GLXFBConfigSGIX": "typedef struct __GLXFBConfigRec *GLXFBConfigSGIX;",
+    "GLXHyperpipeConfigSGIX": "typedef struct {\n    char    pipeName[80]; /* Should be [GLX_HYPERPIPE_PIPE_NAME_LENGTH_SGIX] */\n    int     channel;\n    unsigned int participationType;\n    int     timeSlice;\n} GLXHyperpipeConfigSGIX;",
+    "GLXHyperpipeNetworkSGIX": "typedef struct {\n    char    pipeName[80]; /* Should be [GLX_HYPERPIPE_PIPE_NAME_LENGTH_SGIX] */\n    int     networkId;\n} GLXHyperpipeNetworkSGIX;",
+    "GLXPbuffer": "typedef XID GLXPbuffer;",
+    "GLXPbufferClobberEvent": "typedef struct {\n    int event_type;             /* GLX_DAMAGED or GLX_SAVED */\n    int draw_type;              /* GLX_WINDOW or GLX_PBUFFER */\n    unsigned long serial;       /* # of last request processed by server */\n    Bool send_event;            /* true if this came for SendEvent request */\n    Display *display;           /* display the event was read from */\n    GLXDrawable drawable;       /* XID of Drawable */\n    unsigned int buffer_mask;   /* mask indicating which buffers are affected */\n    unsigned int aux_buffer;    /* which aux buffer was affected */\n    int x, y;\n    int width, height;\n    int count;                  /* if nonzero, at least this many more */\n} GLXPbufferClobberEvent;",
+    "GLXPbufferSGIX": "typedef XID GLXPbufferSGIX;",
+    "GLXPipeRect": "typedef struct {\n    char pipeName[80]; /* Should be [GLX_HYPERPIPE_PIPE_NAME_LENGTH_SGIX] */\n    int srcXOrigin, srcYOrigin, srcWidth, srcHeight;\n    int destXOrigin, destYOrigin, destWidth, destHeight;\n} GLXPipeRect;",
+    "GLXPipeRectLimits": "typedef struct {\n    char pipeName[80]; /* Should be [GLX_HYPERPIPE_PIPE_NAME_LENGTH_SGIX] */\n    int XOrigin, YOrigin, maxHeight, maxWidth;\n} GLXPipeRectLimits;",
+    "GLXPixmap": "typedef XID GLXPixmap;",
+    "GLXStereoNotifyEventEXT": "typedef struct {\n    int type;\n    unsigned long serial;\n    Bool send_event;\n    Display *display;\n    int extension;\n    int evtype;\n    GLXDrawable window;\n    Bool stereo_tree;\n} GLXStereoNotifyEventEXT;",
+    "GLXVideoCaptureDeviceNV": "typedef XID GLXVideoCaptureDeviceNV;",
+    "GLXVideoDeviceNV": "typedef unsigned int GLXVideoDeviceNV;",
+    "GLXVideoSourceSGIX": "typedef XID GLXVideoSourceSGIX;",
+    "GLXWindow": "typedef XID GLXWindow;",
+    "__GLXextFuncPtr": "typedef void ( *__GLXextFuncPtr)(void);"
+  }
 }

@@ -1,3 +1,16 @@
 {
-  "groups": {}
+  "groups": {},
+  "structs": {},
+  "typedefs": {
+    "GPU_DEVICE": "typedef struct _GPU_DEVICE GPU_DEVICE;",
+    "HGPUNV": "DECLARE_HANDLE(HGPUNV);",
+    "HPBUFFERARB": "DECLARE_HANDLE(HPBUFFERARB);",
+    "HPBUFFEREXT": "DECLARE_HANDLE(HPBUFFEREXT);",
+    "HPGPUNV": "DECLARE_HANDLE(HPGPUNV);",
+    "HPVIDEODEV": "DECLARE_HANDLE(HPVIDEODEV);",
+    "HVIDEOINPUTDEVICENV": "DECLARE_HANDLE(HVIDEOINPUTDEVICENV);",
+    "HVIDEOOUTPUTDEVICENV": "DECLARE_HANDLE(HVIDEOOUTPUTDEVICENV);",
+    "PGPU_DEVICE": "typedef struct _GPU_DEVICE *PGPU_DEVICE;",
+    "_GPU_DEVICE": "struct _GPU_DEVICE {\n    DWORD  cb;\n    CHAR   DeviceName[32];\n    CHAR   DeviceString[128];\n    DWORD  Flags;\n    RECT   rcVirtualScreen;\n};"
+  }
 }
